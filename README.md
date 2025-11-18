@@ -44,4 +44,4 @@ PSD is computed using **Welch’s method** and integrated across standard EEG fr
 
 ---
 
-## 5. Repository Structure
+## 4. Repository Structure
