@@ -32,8 +32,8 @@ EEG = pop_chanedit(EEG, 'lookup','C:\Users\MaSoOM\Documents\MATLAB\eeglab2024\pl
 original_channels = EEG.nbchan;
 original_samples = EEG.pnts;
 
-% Filter [2-30 Hz]
-EEG = pop_eegfiltnew(EEG, 'locutoff',2,'hicutoff',30,'plotfreqz',0);
+% Filter [1-30 Hz]
+EEG = pop_eegfiltnew(EEG, 'locutoff',1,'hicutoff',30,'plotfreqz',0);
 
 %% Visualize Channel Locations
 figure;
@@ -244,4 +244,5 @@ function result = iif(condition, true_val, false_val)
     else
         result = false_val;
     end
+
 end
