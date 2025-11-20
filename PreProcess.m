@@ -18,8 +18,7 @@ if ~exist(save_dir, 'dir')
 end
 
 save(fullfile(save_dir, 'eeg_database.mat'), 'eegData1')
-%%
-save_dir = fullfile(userpath, 'my_data');
+
 
 %% Import and Setup
 file_path = "C:\Users\MaSoOM\Documents\MATLAB\my_data\eeg_database.mat";
@@ -172,7 +171,7 @@ end
 
 
 %% Remove Artifact Components
-EEG = pop_subcomp(EEG, artifactIdx, 0, 1);
+EEG = pop_subcomp(EEG, artifactIdx, 0);
 final_corrected = EEG.data;
 
 %% === FINAL QUALITY CONTROL SUMMARY ===
@@ -246,3 +245,4 @@ function result = iif(condition, true_val, false_val)
     end
 
 end
+
